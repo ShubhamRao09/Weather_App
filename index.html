@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="bootstrap.css">
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Weather App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Help
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="how.html">How to Use?</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="searchbox d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- Navbar End -->
+
+    <div class="text-center">
+        <div class="row">
+            <!-- Side Bar -->
+            <div class="col-3">
+                <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary side">
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link link-body-emphasis" data-city="Nashik">
+                          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                          Nashik
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-body-emphasis" data-city="Pune">
+                          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                          Pune
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-body-emphasis" data-city="Mumbai">
+                          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                            Mumbai
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-body-emphasis" data-city="Delhi">
+                          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                            Delhi
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-body-emphasis" data-city="Kolkata">
+                          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                            Kolkata
+                        </a>
+                      </li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            <!-- Side Bar End -->
+
+             <!-- Cards Start -->
+            <div class="col-9">
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center sticky-top">
+                            <div class="card-header">
+                          Temperature
+                            </div>
+                            <div class="card-body">
+                                <h5 id="city" class="card-title">City</h5>
+                                <h2 id="temperature" class="card-title">°C</h2>
+                                <p id="description" class="card-text"><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="card ">
+                            <div class="card-body">
+                                <img src="images/wind.svg" alt="">
+                              <h5 class="card-title">Wind</h5>
+                              <p id="wind" class="card-text">m/s</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="images/humidity.png" alt="">
+                            <h5 class="card-title">Humidity</h5>
+                            <p id="humidity" class="card-text">%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="card ">
+                            <div class="card-body">
+                                <img src="images/visibility.png" alt="">
+                              <h5 class="card-title">Visibility</h5>
+                              <p id="visibility" class="card-text">m</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="images/feel like.png" alt="">
+                            <h5 class="card-title">Feels Like</h5>
+                            <p id="feels-like" class="card-text">°C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="images/pressure.svg" alt="">
+                              <h5 class="card-title">Pressure</h5>
+                              <p id="pressure" class="card-text">hpa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="images/clouds1.png" alt="">
+                            <h5 class="card-title">Clouds</h5>
+                            <p id="clouds" class="card-text">%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <!-- Cards End -->
+     <script src="bootstrap.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
